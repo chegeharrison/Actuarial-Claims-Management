@@ -10,6 +10,8 @@ import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import NewClaim from "./pages/NewClaim";
+import RiskAlert from "./pages/RiskAlert";
+import Reports from "./pages/Reports";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="/NewClaim" element={<NewClaim />} />
+            <Route path="/RiskAlert" element={<RiskAlert />} />
+            <Route path="/Reports" element={<Reports />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

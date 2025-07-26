@@ -15,9 +15,9 @@ const navigation = [
   { name: 'Dashboard', href: '/', icon: BarChart3 },
   { name: 'Claims', href: '/claims', icon: FileText },
   { name: 'New Claim', href: '/NewClaim', icon: Plus },
-  { name: 'Risk Alerts', href: '/alerts', icon: AlertTriangle },
+  { name: 'Risk Alerts', href: '/RiskAlert', icon: AlertTriangle },
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
-  { name: 'Reports', href: '/reports', icon: Download },
+  { name: 'Reports', href: '/Reports', icon: Download },
   { name: 'Users', href: '/users', icon: Users },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];
