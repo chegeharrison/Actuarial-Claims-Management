@@ -1,73 +1,141 @@
-# Welcome to your Lovable project
+# 🛡️ Claim Risk Analyzer
 
-## Project info
+A full-stack **MERN** application that allows users to submit, manage, and analyze insurance claims. This project demonstrates how to build a modern CRUD application using MongoDB, Express.js, React, and Node.js, with clean component structure, modular routing, and persistent database integration.
 
-**URL**: https://lovable.dev/projects/6cb8e4c4-cc71-45a6-8fca-6acb2c6fd1dc
+---
 
-## How can I edit this code?
+## 🧰 Tech Stack
 
-There are several ways of editing your application.
+### 🔹 Frontend (React + Vite + Tailwind CSS)
+- **React (with TypeScript):** Component-based UI.
+- **Vite:** Lightweight and fast development server.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **React Router DOM:** For client-side navigation.
 
-**Use Lovable**
+### 🔹 Backend (Node.js + Express + MongoDB)
+- **Node.js:** JavaScript runtime for server-side logic.
+- **Express.js:** Lightweight backend web framework.
+- **MongoDB + Mongoose:** NoSQL database and ODM.
+- **dotenv:** Manages environment variables.
+- **CORS:** Middleware for handling cross-origin requests.
+- **Nodemon:** Automatically restarts server during development.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6cb8e4c4-cc71-45a6-8fca-6acb2c6fd1dc) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏗️ Project Structure
 
-**Use your preferred IDE**
+claim-risk-analyzer/
+├── backend/
+│ ├── models/
+│ │ └── Claim.js # MongoDB schema using Mongoose
+│ ├── routes/
+│ │ └── claims.routes.js # API routes for CRUD operations
+│ ├── index.js # Main entry point for Express server
+│ ├── .env # Environment config (e.g., DB URI, port)
+│ └── package.json # Backend dependencies
+│
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ │ └── Navbar.tsx # Top navigation bar
+│ │ │ └── ClaimCard.tsx # Claim card for display
+│ │ ├── pages/
+│ │ │ ├── Home.tsx # Landing page
+│ │ │ ├── Claims.tsx # Claims list view
+│ │ │ ├── AddClaim.tsx # Form to submit a new claim
+│ │ │ └── Users.tsx # Placeholder for user list
+│ │ ├── App.tsx # Main app component with routes
+│ │ ├── main.tsx # Entry file for React app
+│ ├── index.html
+│ └── package.json # Frontend dependencies
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🔧 Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js and npm installed
+- MongoDB installed locally or access to MongoDB Atlas
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 🔹 Backend Setup
+
+1. Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+### Install dependencies:
+```bash
+npm install
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/claim-risk-analyzer
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 🔹 Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+### Features
+✅ Submit new insurance claims
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📄 View a list of all submitted claims
 
-**Use GitHub Codespaces**
+✏️ Edit claim details
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+❌ Delete a claim
 
-## What technologies are used for this project?
+⚛️ Interactive, responsive UI with Tailwind CSS
 
-This project is built with:
+🧩 Real-time persistence with MongoDB
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🧠 Built with scalability and modularity in mind
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/6cb8e4c4-cc71-45a6-8fca-6acb2c6fd1dc) and click on Share -> Publish.
+ ### Possible Enhancements
+🔐 Add user authentication (JWT, OAuth)
 
-## Can I connect a custom domain to my Lovable project?
+🤖 Integrate AI/ML risk scoring algorithms
 
-Yes, you can!
+📎 Support file upload for claim evidence
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+🔍 Add filtering, pagination, and search
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🧑‍💼 Admin dashboard with approval workflow
+
+📩 Email/SMS notifications for updates
+
+🐳 Deploy with Docker or on cloud platforms
+
+### 🧪 Testing Tips
+To test backend APIs, use:
+
+Postman
+
+Thunder Client (VS Code Extension)
+
+curl via command line
+
+Example Test with curl:
+```bash 
+curl -X POST http://localhost:5000/api/claims \
+  -H "Content-Type: application/json" \
+  -d '{"policyHolder":"Test User", "amount":5000, "description":"Accident", "status":"Pending"}'
+```
+
+### 📦 Tech Stack
+Frontend: React + TypeScript + Tailwind CSS + Vite
+
+Backend: Express.js + Node.js + MongoDB + Mongoose
+
+Tooling: Nodemon, dotenv, Postman, Thunder Client
+
+Developed by Harrison Chege
+Feel free to fork, enhance, and share 🌍
