@@ -20,14 +20,32 @@ const NewClaim = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Submitting claim:', formData);
-    // TODO: Post to backend API here
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Redirect back to claims list
-    navigate('/claims');
-  };
+  try {
+    const response = await fetch("http://localhost:5000/api/claims", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to submit claim");
+    }
+
+    const result = await response.json();
+    console.log("Claim submitted:", result);
+
+    navigate("/claims");
+  } catch (error) {
+    console.error("Error submitting claim:", error);
+    alert("There was an error submitting your claim. Please try again.");
+  }
+};
+
 
   return (
     <div className="max-w-3xl mx-auto py-10">
