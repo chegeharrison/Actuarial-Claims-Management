@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ClaimsTable from '@/components/ClaimsTable';
 import { mockClaims } from '@/data/mockData';
+import { Link } from "react-router-dom";
 
 export default function Claims() {
   const [claims] = useState(mockClaims);
@@ -19,10 +20,12 @@ export default function Claims() {
             Manage and review insurance claims
           </p>
         </div>
+        <Link to="/NewClaim">
         <Button>
           <Plus className="h-4 w-4 mr-2" />
           New Claim
         </Button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

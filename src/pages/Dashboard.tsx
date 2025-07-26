@@ -9,6 +9,7 @@ import {
   PieChart
 } from 'lucide-react';
 import MetricsCard from '@/components/MetricsCard';
+import { Link } from "react-router-dom";
 import ClaimsTable from '@/components/ClaimsTable';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -56,8 +57,12 @@ export default function Dashboard() {
           </p>
         </div>
         <div className="flex gap-3">
+          <Link to="/Reports">
           <Button variant="outline">Export Report</Button>
+          </Link>
+          <Link to="/NewClaim">
           <Button>New Claim</Button>
+          </Link>
         </div>
       </div>
 
