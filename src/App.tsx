@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import NewClaim from "./pages/NewClaim";
 import RiskAlert from "./pages/RiskAlert";
 import Reports from "./pages/Reports";
+import Users from "./pages/Users";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/NewClaim" element={<NewClaim />} />
             <Route path="/RiskAlert" element={<RiskAlert />} />
             <Route path="/Reports" element={<Reports />} />
+            <Route path="/Users" element={<Users />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

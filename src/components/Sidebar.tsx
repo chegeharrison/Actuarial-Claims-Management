@@ -18,7 +18,7 @@ const navigation = [
   { name: 'Risk Alerts', href: '/RiskAlert', icon: AlertTriangle },
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
   { name: 'Reports', href: '/Reports', icon: Download },
-  { name: 'Users', href: '/users', icon: Users },
+  { name: 'Users', href: '/Users', icon: Users },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];
 
