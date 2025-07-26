@@ -54,10 +54,10 @@ export default function Sidebar() {
       
       <div className="border-t border-border p-4">
         <div className="text-xs text-muted-foreground">
-          Actuarial Analytics Platform
+          Chege Harrison
         </div>
         <div className="text-xs text-muted-foreground mt-1">
-          v2.1.0 - Production
+          Version 1.0.0
         </div>
       </div>
     </div>
