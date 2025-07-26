@@ -24,33 +24,32 @@ A full-stack **MERN** application that allows users to submit, manage, and analy
 
 ## 🏗️ Project Structure
 
+```
 claim-risk-analyzer/
 ├── backend/
-│ ├── models/
-│ │ └── Claim.js # MongoDB schema using Mongoose
-│ ├── routes/
-│ │ └── claims.routes.js # API routes for CRUD operations
-│ ├── index.js # Main entry point for Express server
-│ ├── .env # Environment config (e.g., DB URI, port)
-│ └── package.json # Backend dependencies
+│   ├── models/
+│   │   └── Claim.js            # MongoDB schema using Mongoose
+│   ├── routes/
+│   │   └── claims.routes.js    # API routes for CRUD operations
+│   ├── index.js                # Main entry point for Express server
+│   ├── .env                    # Environment config (e.g., DB URI, port)
+│   └── package.json            # Backend dependencies and scripts
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ │ └── Navbar.tsx # Top navigation bar
-│ │ │ └── ClaimCard.tsx # Claim card for display
-│ │ ├── pages/
-│ │ │ ├── Home.tsx # Landing page
-│ │ │ ├── Claims.tsx # Claims list view
-│ │ │ ├── AddClaim.tsx # Form to submit a new claim
-│ │ │ └── Users.tsx # Placeholder for user list
-│ │ ├── App.tsx # Main app component with routes
-│ │ ├── main.tsx # Entry file for React app
-│ ├── index.html
-│ └── package.json # Frontend dependencies
-
-
----
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.tsx      # Top navigation bar
+│   │   │   └── ClaimCard.tsx   # Card component to display individual claims
+│   │   ├── pages/
+│   │   │   ├── Home.tsx        # Landing page
+│   │   │   ├── Claims.tsx      # Page to view all claims
+│   │   │   ├── AddClaim.tsx    # Form page to submit a new claim
+│   │   │   └── Users.tsx       # Placeholder for user list (future use)
+│   │   ├── App.tsx             # Main React component that defines routes
+│   │   └── main.tsx            # Entry point that renders <App /> to the DOM
+│   ├── index.html              # HTML template for the React app
+│   └── package.json            # Frontend dependencies and scripts
+```
 
 ## 🚀 Getting Started
 
