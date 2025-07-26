@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 const navigation = [
   { name: 'Dashboard', href: '/', icon: BarChart3 },
   { name: 'Claims', href: '/claims', icon: FileText },
-  { name: 'New Claim', href: '/claims/new', icon: Plus },
+  { name: 'New Claim', href: '/NewClaim', icon: Plus },
   { name: 'Risk Alerts', href: '/alerts', icon: AlertTriangle },
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
   { name: 'Reports', href: '/reports', icon: Download },

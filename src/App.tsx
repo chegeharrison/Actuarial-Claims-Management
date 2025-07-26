@@ -9,6 +9,7 @@ import Claims from "./pages/Claims";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import NewClaim from "./pages/NewClaim";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="analytics" element={<Analytics />} />
             <Route path="settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/NewClaim" element={<NewClaim />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
